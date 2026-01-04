@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import clsx from 'clsx';
 
 const navigation = [
@@ -16,7 +16,7 @@ const navigation = [
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
-    const [activeIndex, setActiveIndex] = useState(-1);
+    const [, setActiveIndex] = useState(-1);
     const location = useLocation();
 
     useEffect(() => {
@@ -77,7 +77,7 @@ export default function Header() {
 
                     {/* Desktop Navigation */}
                     <div className="hidden lg:flex items-center gap-1 bg-dark-800/50 rounded-full px-2 py-1 backdrop-blur-sm border border-white/5">
-                        {navigation.map((item, index) => (
+                        {navigation.map((item) => (
                             <Link
                                 key={item.name}
                                 to={item.href}

@@ -1,0 +1,16 @@
+# Robots.txt for stachbit.in
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://stachbit.in/sitemap.xml
+
+# Block admin routes (if any)
+Disallow: /admin/
+
+# Allow all crawlers to index the site
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /

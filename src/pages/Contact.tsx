@@ -115,6 +115,27 @@ export default function Contact() {
 
             if (submitError) throw submitError;
 
+            // Trigger email notification (fire and forget - don't block on errors)
+            try {
+                const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+                if (supabaseUrl) {
+                    fetch(`${supabaseUrl}/functions/v1/send-contact-notification`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            name: formData.name,
+                            email: formData.email,
+                            phone: formData.phone,
+                            subject: formData.service_interest ? `Inquiry: ${formData.service_interest}` : undefined,
+                            message: formData.message,
+                            source: 'stachbit.in',
+                        }),
+                    }).catch(console.error);
+                }
+            } catch (emailErr) {
+                console.error('Email notification error:', emailErr);
+            }
+
             setSuccess(true);
             setFormData({
                 name: '',

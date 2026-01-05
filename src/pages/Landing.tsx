@@ -13,6 +13,7 @@ import {
     CheckCircle2,
     Play,
     Star,
+    MessageCircle,
 } from 'lucide-react';
 
 // UI Components
@@ -50,6 +51,13 @@ const services = [
         description: 'APIs, integrations, automation tools, and bespoke software tailored to your specific needs.',
         color: 'from-orange-500 to-red-500',
         bgColor: 'bg-orange-500/10',
+    },
+    {
+        icon: MessageCircle,
+        title: 'WhatsApp Bots',
+        description: 'AI-powered WhatsApp bots for order placing, customer support, and business automation.',
+        color: 'from-green-500 to-emerald-500',
+        bgColor: 'bg-green-500/10',
     },
 ];
 

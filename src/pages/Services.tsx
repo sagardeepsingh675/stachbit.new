@@ -16,6 +16,8 @@ import {
     Wrench,
     Sparkles,
     Zap,
+    MessageCircle,
+    Bot,
 } from 'lucide-react';
 
 // UI Components
@@ -115,6 +117,29 @@ const services = [
             'Third-party Integrations',
         ],
         pricing: 'Custom Quote',
+    },
+    {
+        id: 'whatsapp-bot',
+        icon: MessageCircle,
+        title: 'WhatsApp Bot Solutions',
+        description: 'AI-powered WhatsApp bots for automating orders, customer support, and business operations.',
+        color: 'from-green-500 to-emerald-500',
+        borderColor: 'hover:border-green-500/50',
+        features: [
+            { icon: Bot, text: 'AI-Powered Responses' },
+            { icon: ShoppingCart, text: 'Order Management' },
+            { icon: Users, text: 'Customer Support' },
+            { icon: Settings, text: 'Business Automation' },
+        ],
+        offerings: [
+            'Order Placing Bot',
+            'AI Customer Support',
+            'Appointment Booking',
+            'Product Catalog Bot',
+            'FAQ Automation',
+            'Lead Generation Bot',
+        ],
+        pricing: 'Starting from ₹25,000',
     },
 ];
 

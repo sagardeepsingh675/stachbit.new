@@ -9,6 +9,7 @@ const footerLinks = {
         { name: 'SaaS Applications', href: '/services#saas' },
         { name: 'Android Apps', href: '/services#android' },
         { name: 'Custom Solutions', href: '/services#custom' },
+        { name: 'WhatsApp Bots', href: '/services#whatsapp-bot' },
     ],
     company: [
         { name: 'About Us', href: '/about' },
